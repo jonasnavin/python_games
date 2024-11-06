@@ -1,12 +1,14 @@
 import random
 from enum import Enum
 
-def rock_paper_scissors_game():
+def rock_paper_scissors_game(user_name):
 
     game_count = 0
     game_win = 0
     game_lose = 0
     game_tie = 0
+
+    print(f"\n{user_name}, Welcome to rock, paper and scissors game.")
 
     def game():
 
@@ -72,12 +74,14 @@ def rock_paper_scissors_game():
                     print(f"\nGame Count: {game_count}")
                     print(f"Wins: {game_win}")
                     print(f"Loses: {game_lose}")
-                    print(f"Tie Game = {game_tie}")
+                    print(f"Tie Game: {game_tie}")
                     flag = False
             else:
                 print("\nInvalid choice. Choose options either 1 or 2.")
 
 
-    return game()
+    return game
 
-rock_paper_scissors_game()
+name = input("Enter your name: ")
+player = rock_paper_scissors_game(name)
+player()
